@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Formulario IMSS</title>
+</head>
+<body>
+    <img src="img/imms.png" alt="" width="100px">
+    <h1>Formulario IMSS</h1>
+
+    <form action="" class="declara" id="contact_form">
+        <ul>
+            <span class="required notification"> *Agregue sus datos*</span>
+            <br><br>
+            <!-- No. De Derecho Habiente -->
+            <li>
+                <label for="numeroDH">No. Derecho Habiente</label><br>
+                <input type="text" name="no.DH" class="primer" pattern="[A-Za-z0-9]{11}" placeholder="No. Derecho Habiente" maxlength="11" minlength="11" required>
+                <span class="indicador"></span>
+            </li><br>
+            <!-- NOMBRE -->
+            <li>
+                <label for="nombre">Nombre(s)</label><br>
+                <input type="text" name="nombre" class="primer" pattern="[A-Za-z ]+" placeholder="Nombre(s)" maxlength="15" minlength="2" required>
+                <span class="indicador"></span>
+            </li><br>
+            <!-- APELLIDO -->
+            <li>
+                <label for="apellido">Apellido(s)</label><br>
+                <input type="text" name="nombre" class="primer" pattern="[A-Za-z ]+" placeholder="Apellido" maxlength="20" required>
+                <span class="indicador"></span>
+            </li>
+            <br>
+            <!-- Tipo de Sangre -->
+            <li>
+                <label for="tipoSangre">Tipo de Sangre: </label>
+                <select name="tipoSangre" class="sangre" required>
+                    <option value="" disabled selected>--Opciones</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                    <option value="A">A</option>
+                    <option value="RH">RH</option>
+                </select>
+                <span class="indicador"></span>
+                <select name="signoSangre" class="sangre" required>
+                    <option value="" disabled selected>--Opciones</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="nulo">nulo</option>
+                </select>
+                <span class="indicador"></span>
+            </li><br>
+            <!-- Edad -->
+            <li>
+                <label for="edad">Edad</label>
+                <input type="text" name="edad" class="edad" pattern="\d{2}" minlength="1" maxlength="2" inputmode="numeric" size="3" required>
+                <span class="indicador"></span>
+            </li><br>
+            <!-- Especialidad -->
+            <li>
+                <label for="especialidad">Especialidad</label>
+                <select name="especialidad" class="especialidad" required>
+                    <option value="" disabled selected>--Opciones</option>
+                    <option value="anestesiologia">Anestesiología</option>
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="cirugia-general">Cirugía General</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="endocrinologia">Endocrinología</option>
+                    <option value="gastroenterologia">Gastroenterología</option>
+                    <option value="geriatria">Geriatría</option>
+                    <option value="ginecologia-obstetricia">Ginecología y Obstetricia</option>
+                    <option value="hematologia">Hematología</option>
+                    <option value="infectologia">Infectología</option>
+                </select>
+                <span class="indicador"></span>
+            </li><br>
+            <!-- Teléfono -->
+            <li>
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" name="lada" pattern="[0-9]{3}" maxlength="3" class="lada" placeholder="LADA" size="2" required>
+                <span class="indicador"></span>
+                <input type="tel"  name="telefono" pattern="[0-9]{7}" maxlength="7" class="telefono" size="6" placeholder="NUMERO" required>
+                <span class="indicador"></span>
+            </li><br>
+                <button class="submit" type="submit">Enviar</button>
+        </ul>
+    </form>
+
+</body>
+</html>
